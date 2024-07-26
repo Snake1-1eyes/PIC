@@ -1,0 +1,61 @@
+body {
+    font-family: "Times New Roman", sans-serif;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 40px auto;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.col-md-7 {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 2px solid #ddd;
+}
+
+.col-md-5 {
+    padding: 20px;
+}
+
+.img {
+    width: 700px;
+    height: 600px;
+}
+.carousel-inner {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}

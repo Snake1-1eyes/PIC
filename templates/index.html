@@ -14,14 +14,16 @@
             <h1 class="text-center">Название товара</h1>
             <div class="row">
                 <div class="col-md-7">
+                    {% for infos in info %}
                     <h3>Инициатор:</h3>
-                    <p>**Иванов Иван Иванович**</p>
+                    <p>{{ infos.Init }}</p>
                     <h3>ГИП:</h3>
-                    <p>**Петров Петр Петрович**</p>
+                    <p>{{ infos.GIP }}</p>
                     <h3>Комментарий ГИП:</h3>
-                    <p>**Комментарий ГИП**</p>
+                    <p>{{ infos.Comment_GIP }}</p>
                     <h3>Изготовлено:</h3>
-                    <p>**2022-01-01**</p>
+                    <p>{{ infos.initiator }}</p>
+                    {% endfor %}
                 </div>
                 <div class="col-md-5">
                     <div class="row">

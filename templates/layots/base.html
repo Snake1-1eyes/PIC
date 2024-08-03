@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название товара</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+<body>
+        <div class="container">
+            <h1 class="text-center">Название товара</h1>
+            <div class="row">
+                <div class="col-md-7">
+                    {% for infos in info %}
+                    <h3>Инициатор:</h3>
+                    <p>{{ infos.Init }}</p>
+                    <h3>ГИП:</h3>
+                    <p>{{ infos.GIP }}</p>
+                    <h3>Комментарий ГИП:</h3>
+                    <p>{{ infos.Comment_GIP }}</p>
+                    <h3>Изготовлено:</h3>
+                    <p>{{ infos.initiator }}</p>
+                    {% endfor %}
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% block content %}
+                            Hello
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

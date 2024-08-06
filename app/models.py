@@ -2,7 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Site(models.Model):
-    Работа = models.CharField(max_length=150, primary_key=True)
+    УИД = models.CharField(max_length=36, primary_key=True)
+    Работа = models.CharField(max_length=150)
     Инициатор = models.CharField(max_length=100)
     ГИП = models.CharField(max_length=100)
     КомментарийГИП = models.CharField(max_length=512)

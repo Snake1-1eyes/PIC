@@ -13,7 +13,8 @@
 
 <body>
     <div class="container">
-        {% for infos in info|slice:"44:45" %}
+        {% for infos in info %}
+        {% if infos.УИД == request.GET.uid %}
         <h1 class="text-center">{{ infos.Работа|default:"Нет данных" }}</h1>
         <div class="row">
             <div class="col-md-7">
@@ -36,6 +37,7 @@
                 </div>
             </div>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

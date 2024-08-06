@@ -1,12 +1,17 @@
 from django.db import models
 
 # Create your models here.
-class Table1(models.Model):
-    id = models.IntegerField(primary_key=True)
-    Init = models.CharField(max_length=50)
-    GIP = models.CharField(max_length=50)
-    Comment_GIP = models.CharField(max_length=50)
-    initiator = models.DateField()
+class Site(models.Model):
+    Работа = models.CharField(max_length=150, primary_key=True)
+    Инициатор = models.CharField(max_length=100)
+    ГИП = models.CharField(max_length=100)
+    КомментарийГИП = models.CharField(max_length=512)
+    Изготовлено = models.DateTimeField()
+    def get_queryset(self):
+        return Site.objects.all()
+
+    def get_data(self):
+        return self.get_queryset()
     class Meta:
-        db_table = 'Table_1'
+        db_table = 'Site'
         managed = False

@@ -13,19 +13,18 @@
 
 <body>
     <div class="container">
-        <h1 class="text-center">Название товара</h1>
+        {% for infos in info|slice:"44:45" %}
+        <h1 class="text-center">{{ infos.Работа|default:"Нет данных" }}</h1>
         <div class="row">
             <div class="col-md-7">
-                {% for infos in info %}
                 <h3>Инициатор:</h3>
-                <p>{{ infos.Init }}</p>
+                <p>{{ infos.Инициатор|default:"Нет данных" }}</p>
                 <h3>ГИП:</h3>
-                <p>{{ infos.GIP }}</p>
+                <p>{{ infos.ГИП|default:"Нет данных" }}</p>
                 <h3>Комментарий ГИП:</h3>
-                <p>{{ infos.Comment_GIP }}</p>
+                <p>{{ infos.КомментарийГИП|default:"Нет данных" }}</p>
                 <h3>Изготовлено:</h3>
-                <p>{{ infos.initiator }}</p>
-                {% endfor %}
+                <p>{{ infos.Изготовлено|default:"Нет данных"|date:"Y-m-d H:i"}}</p>
             </div>
             <div class="col-md-5">
                 <div class="row">
@@ -37,6 +36,7 @@
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

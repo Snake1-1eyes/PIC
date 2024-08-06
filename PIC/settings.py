@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'PIC.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mssql',
-        'NAME': 'Test',
+        'NAME': 'ERP_ModulChD',
         'USER': '',
         'PASSWORD': '',
         'HOST': 'localhost',
